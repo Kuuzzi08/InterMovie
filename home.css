@@ -8,11 +8,15 @@
 
 /* Body and Container Styles */
 body {
-    background-color: #121212;
+    background-color: #0e0e0e;
     color: #fff;
     margin: 0;
     padding: 0;
     font-size: 16px;
+    background-image: url('https://wallpapercave.com/wp/wp4951826.jpg'); /* Change this to an actual movie-like background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .container {
@@ -21,20 +25,58 @@ body {
     padding: 20px;
 }
 
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar img {
+    width: 150px;
+    height: auto;
+}
+
+.nav-links a {
+    color: #fff;
+    font-size: 18px;
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    color: #ff6347; /* Hover effect for links */
+}
+
+.search-bar {
+    padding: 8px;
+    font-size: 16px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+}
+
 /* Banner Section */
 #banner {
-    background-size: cover;
-    background-position: center;
-    height: 400px;
+    height: 500px;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
-    font-size: 3em;
+    font-size: 4em;
     font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
     position: relative;
-    margin-bottom: 20px;
+    margin-top: 80px; /* Adjust for navbar */
+    background-size: cover;
+    background-position: center;
 }
 
 #banner-title {
@@ -48,13 +90,14 @@ h2 {
     margin-bottom: 10px;
     color: #fff;
     text-align: center;
+    margin-top: 50px;
 }
 
 /* Movie, TV Show, Anime Grid */
 #movies-list, #tvshows-list, #anime-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 15px;
     margin-bottom: 40px;
 }
 
@@ -67,7 +110,7 @@ h2 {
 
 #movies-list img:hover, #tvshows-list img:hover, #anime-list img:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
 }
 
 /* Modal Styles */
@@ -95,7 +138,7 @@ h2 {
 }
 
 #modal-title {
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: 15px;
 }
 
@@ -176,6 +219,16 @@ footer {
     margin-top: 50px;
     font-size: 1em;
     color: #ccc;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #ccc;
+}
+
+.footer-links a:hover {
+    color: #ff6347; /* Hover effect for footer links */
 }
 
 /* Server Dropdown */
